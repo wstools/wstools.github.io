@@ -1,0 +1,13 @@
+---
+layout: wsmud
+---
+
+<h1 class="article_title">
+    {{ page.title }}
+</h1>
+<h6 class="article_date">
+    {{ page.date | date: "%-d %B %Y"}}
+    by {{ page.author | default: site.author }}
+</h6>
+
+{{ content }}

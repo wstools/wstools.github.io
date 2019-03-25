@@ -1,20 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>武神传说多开窗口</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="multiwindowing.css">
-	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<body>
+---
+layout: wsmud
+---
 
-<div id="buttonArea"></div>
+<div class="page_index">
+    <div class="index_tools"></div>
+    <div class="index_posts">
+        {% for post in paginator.posts %}
+        <h3>
+            <a class="post_link" href="{{ post.url }}">{{ post.title }}</a>
+            <div class="post_date">({{ post.date | date:"%Y/%m/%d" }})</div>
+        </h3>
+        {% endfor %}
+    </div>
+</div>
 
-<div id="float"></div>
+<script>
+(function() {
+    let links = {
+        "武神小站": "https://suqing.fun/wsmud/",
+        "窗口多开": "/tool/multi/",
+    };
+    for (const key in links) {
+        let value = links[key];
+        $(".index_tools").append(`<a href="${value}">${key}</a>&nbsp;`);
+    }
+})();
+</script>
 
-<div id="iframeArea"></div>
+<br>
 
-<script src="multiwindowing.js"></script>
 
-</body>
-</html>
+
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 上一页</a>
+    {% else %}
+        <span>&laquo; 上一页</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+            <em>{{ page }}</em>
+        {% elsif page == 1 %}
+            <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+        {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &raquo;</a>
+    {% else %}
+        <span>Next &raquo;</span>
+    {% endif %}
+</div>
+{% endif %}

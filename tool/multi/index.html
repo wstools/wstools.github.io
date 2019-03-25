@@ -1,0 +1,36 @@
+---
+layout: wsmud
+---
+
+<h3>您需要创建游戏窗口的数量是多少？</h3>
+<div>
+    <input type="text" id="multi_number">
+    <button type="button" id="confirm">确认</button>
+    <span class="warning"></span>
+</div>
+<div class="windows"></div>
+
+<script>
+(function() {
+    $("head").append(`<link rel="stylesheet" href="multi.css">`);
+    $("#confirm").click(() => {
+        let number = $("#multi_number").val();
+        console.log(number);
+        if (isNaN(number) || number === "") {
+            $(".warning").html("请输入阿拉伯数字！");
+        } else {
+            createWindows(number);
+            $(".warning").html(`添加了${number}个窗口！`);
+        }
+    });
+    function createWindows(number) {
+        for (let i = 0; i < number; i++) {
+            $(".windows").append(
+                $(`<iframe src="http://game.wsmud.com"></iframe>`)
+                .attr("target", "_blank")
+                .addClass("window")
+            );
+        }
+    }
+})();
+</script>

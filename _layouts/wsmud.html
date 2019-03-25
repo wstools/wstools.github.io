@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>
+(function() {
+    $("head").append(`<link rel="stylesheet" href="/css/style.css">`);
+    $("header h1").addClass("h1_before").click(() => window.history.back(-1));
+    $("#downloads").hide();
+})();
+</script>
+{{ content }}

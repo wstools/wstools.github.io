@@ -1,1 +1,23 @@
+# 主题
 theme: jekyll-theme-hacker
+# 标题
+title: 武神传说
+# 介绍
+description: 资料站 http://www.wsmud.site/
+# 署名
+author: suqing
+
+# 插件
+plugins: [jekyll-paginate]
+
+# 分页
+paginate: 10
+paginate_path: "wsmud/page:num"
+
+# permalink 博客文章的永久链接
+permalink: /wsmud/:year:month/:title.html
+
+# Whether to provide a download URL (true/false)
+show_downloads: false
+# Google Analytics tracking ID
+google_analytics:

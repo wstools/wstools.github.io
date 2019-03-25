@@ -1,0 +1,44 @@
+.h1_before:before {
+    content: "";
+}
+.h1_before {
+    margin-left: 0;
+}
+
+.page_index {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.index_tools a {
+    display: inline-block;
+    color: springgreen;
+    text-decoration: none;
+    width: 5em;
+    text-align: center;
+    border: solid #888888 1px;
+}
+.index_tools a:hover:active {
+    transform: translateY(1px);
+}
+
+.index_posts {
+    margin-top: 24px;
+}
+
+.post_link {
+    color: turquoise;
+    text-decoration: none;
+}
+.post_date {
+    display: inline;
+    font-size: 12px;
+    color: #888888;
+}
+
+.article_title {
+    text-align: center;
+}
+.article_date {
+    text-align: right;
+}
