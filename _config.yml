@@ -3,7 +3,7 @@ theme: jekyll-theme-hacker
 # 标题
 title: 武神传说
 # 介绍
-description: 资料站 http://www.wsmud.site/
+description: 资料站 http://www.wsmud.site/ & QQ群 953279200
 # 署名
 author: suqing
 
@@ -15,7 +15,7 @@ paginate: 10
 paginate_path: "wsmud/page:num"
 
 # permalink 博客文章的永久链接
-permalink: /wsmud/:year:month/:title.html
+permalink: /wsmud/:year/:title.html
 
 # Whether to provide a download URL (true/false)
 show_downloads: false
