@@ -1,0 +1,44 @@
+.color1 {
+    color: turquoise;
+    color: darkcyan;
+}
+
+
+body {
+    overflow: visible;
+    display: flex;
+    flex-flow: row wrap;
+    flex-flow: column;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+
+    white-space: nowrap;
+    white-space: normal;
+    display: inline;
+    display: inline-block;
+}
+
+/* 颜色标签
+<wht></wht> 白色
+<hig></hig> 绿
+<hic></hic> 蓝
+<hiy></hiy> 黄
+<hiz></hiz> 紫
+<hio></hio> 橙
+<hir></hir> 红
+<him></him> 亮紫色 谣言
+*/
+
+/*  橙色药方 玄灵丹   天仙藤,人参,巨骨舌鱼,盘龙参,人参,灵芝,人参,凌霄花,银龙鱼
+*/
+
+
+/*
+- 武当
+    心法100 剑法100 =>
+
+
+
+
+*/

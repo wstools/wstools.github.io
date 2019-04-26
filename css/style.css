@@ -42,3 +42,36 @@
 .article_date {
     text-align: right;
 }
+
+.eq {
+    width: 200px;
+    text-align: right;
+    display: inline-block;
+}
+.text {
+    text-align: left;
+    display: inline-block;
+    color: #008000;
+}
+
+.w {
+    color: #eaeaea;
+}
+.g {
+    color: #00ff00;
+}
+.b {
+    color: #00ffff;
+}
+.y {
+    color: #fff000;
+}
+.p {
+    color: #912cee;
+}
+.o {
+    color: #ffa500;
+}
+.r {
+    color: #ff0000;
+}

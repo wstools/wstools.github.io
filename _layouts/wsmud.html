@@ -5,7 +5,9 @@ layout: default
 <script>
 (function() {
     $("head").append(`<link rel="stylesheet" href="/css/style.css">`);
-    $("header h1").addClass("h1_before").click(() => window.history.back(-1));
+    $("header h1").addClass("h1_before").click(function() {
+        window.location.href = "/";
+    });
     $("#downloads").hide();
 })();
 </script>
