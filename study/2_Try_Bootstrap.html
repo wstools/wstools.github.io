@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>1. Glyphicon - 字体图标</h1>
+        <p><span class="glyphicon glyphicon-heart-empty"></span> Heart Empty</p>
+        <p><span class="glyphicon glyphicon-star"></span> Star</p>
+        <p><span class="glyphicon glyphicon-pencil"></span> Pencil</p>
+        <p><span class="glyphicon glyphicon-ok"></span> OK</p>
+        <p><span class="glyphicon glyphicon-remove"></span> Remove</p>
+        <p><span class="glyphicon glyphicon-zoom-in"></span> Zoom In</p>
+        <p><span class="glyphicon glyphicon-zoom-out"></span> Zoom Out</p>
+        <p><span class="glyphicon glyphicon-off"></span> Off</p>
+        <p><span class="glyphicon glyphicon-user"></span> User</p>
+        <p><span class="glyphicon glyphicon-lock"></span> Lock</p>
+        <p><span class="glyphicon glyphicon-repeat"></span> Repeat</p>
+        <p><span class="glyphicon glyphicon-refresh"></span> Refresh</p>
+        <p><span class="glyphicon glyphicon-tag"></span> Tag</p>
+        <p><span class=""></span></p>
+        <p><span class=""></span></p>
+        <p><span class=""></span></p>
+        <p><span class=""></span></p>
+        <p><span class=""></span></p>
+
+        <h1>2. Dropdown Menu - 下拉菜单</h1>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" id="dropdownMenu1"
+                type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action 1</a></li>
+                <li><a href="#">Action 2</a></li>
+                <li><a href="#">Action 3</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Action 4</a></li>
+                <li class="dropdown-header">Dropdown header 小标题</li>
+                <li><a href="#">Action 5</a></li>
+                <li class="disabled"><a href="#">Disabled</a></li>
+                <li role="separator" class="divider"></li>
+            </ul>
+        </div>
+
+        <h1>3. Button Group / Button Toolbar - 按钮组 / 按钮工具栏 </h1>
+        <div class="btn-toolbar">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+                <button type="button" class="btn btn-default">3</button>
+            </div>
+        </div>
+
+
+        <h1>4. 按钮式下拉菜单</h1>
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+ <hr>
+
+
+
+
+
+
+
+    <div class="page-header">
+        <h1>Page header 页头 <small>Subtext for header 小标题</small></h1>
+    </div>
+
+    <h3></h3>
+
+
+
+
+
+
+
+    <div class="page-header">
+        <h1>Panel 面板</h1>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Panel Heading 面板标题</div>
+        <div class="panel-body">
+            <p>Panel Body 面板主体</p>
+        </div>
+        <div class="panel-footer">Panel Footer 面板注脚</div>
+        <table class="table">
+            <thead><tr>Glyphicon 字体图标</tr></thead>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">panel-primary</div>
+        <div class="panel-body">Primary 主要 蓝</div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">panel-success</div>
+        <div class="panel-body">Success 成功 绿</div>
+        <ul class="list-group">
+            <li class="list-group-item">List group item</li>
+            <li class="list-group-item">List group item</li>
+            <li class="list-group-item">List group item</li>
+            <li class="list-group-item">List group item</li>
+            <li class="list-group-item">List group item</li>
+        </ul>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">panel-info</div>
+        <div class="panel-body">Info 信息 蓝</div>
+    </div>
+    <div class="panel panel-warning">
+        <div class="panel-heading">panel-warning</div>
+        <div class="panel-body">Warning 警告 黄</div>
+    </div>
+    <div class="panel panel-danger">
+        <div class="panel-heading">panel-danger</div>
+        <div class="panel-body">Danger 危险 红</div>
+    </div>
+
+
+    <div>
+        <h1>Label</h1>
+        <span class="label label-default">Default</span>
+        <span class="label label-primary">Primary</span>
+        <span class="label label-success">Success</span>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+    </div>
+
+    <br>
+
+
+</body>
+</html>
