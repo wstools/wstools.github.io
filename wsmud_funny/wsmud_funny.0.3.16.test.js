@@ -18,6 +18,7 @@
 
 (function() {
     "use strict";
+
     let title = new Proxy({name: "RoleName", state: "<STATE>"}, {
         set: function(title, key, value) {
             title[key] = value;
@@ -60,10 +61,14 @@
     }
     // Message
     function onmessage(event) {
-        listeners.forEach(fn => {
-            if(fn(event)) action(event);
-        });
+        let message = Str2Obj(event.data);
+        for (let i = 0; i < listeners.length; i++) {
+            let fn = listeners[i];
+            if (fn(event, message) === 0) return;
+        }
+        action(event, message);
     }
+
     if (WebSocket) {
         unsafeWindow.WebSocket = function(uri) {
             websocket = new WebSocket(uri);
@@ -90,18 +95,19 @@
     } else return; // 若 WebSocket 不存在 则运行结束
 
 
+
     addListener(function(event, message) {
 
     });
 
 
 
+    // 你正在领悟石壁
+    // {type: "dialog", dialog: "skills", id: "sword", exp: 98}
 
 
 
-
-
-
+    // greet master
 
 
 
@@ -234,13 +240,7 @@
         }
     };
 
-    function Str2Obj(str) {
-        if (str[0] === "{") {
-            return (new Function("return " + str))();
-        } else {
-            return {"type": "text", "text": str};
-        }
-    }
+
     function DeepCopy(object) {
         let result = {};
         for (const key in object) {
@@ -1280,7 +1280,16 @@
         }
     });
 
+    function Str2Obj(str) {
+        if (str[0] === "{") {
+            return (new Function("return " + str))();
+        } else {
+            return {"type": "text", "text": str};
+        }
+    }
+
     unsafeWindow.funny = wsmud;
     unsafeWindow.funny.SendCommand = SendCommand;
     unsafeWindow.funny.DeepCopy = DeepCopy;
 })();
+

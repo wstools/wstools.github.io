@@ -18,14 +18,7 @@
 // };
 // let role_proxy = new Proxy(role, role_handler);
 
-let title = new Proxy({name: "RoleName", state: "<STATE>"}, {
-    set: function(title, key, value) {
-        title[key] = value;
-    },
-    get: function(title, key) {
-        return title[key];
-    }
-});
+
 
 // role_proxy.lianxi = 1;
 // console.log(role);
