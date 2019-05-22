@@ -98,6 +98,58 @@
 
 // var formData = new FormData();
 // formData.append('tel', '18217767969');
-// formData.append('psw', '111111');
+// // formData.append('psw', '111111');
 
-// console.log(formData);
+// // console.log(formData);
+
+
+
+// function SendCommand(command) {//发送
+//     if (command instanceof Array) {
+//         let cmd = command.splice(0, 1)[0];
+//         if (typeof cmd === "number") {
+//             setTimeout(() => SendCommand(command), cmd);
+//         } else if (cmd) {
+//             SendCommand(cmd);
+//             SendCommand(command);
+//         }
+//     } else if (typeof command === "string") {
+//         console.log(command);
+//     }
+// }
+
+
+// let test = ["1", "2"];
+// SendCommand(test);
+
+// console.log([].splice(0, 1)[0]);
+
+let a = [1, 2, 1, 2, 3];
+
+function test(a) {
+    let b = [];
+    for (let i = 0; i < a.length; i++) {
+        let n = a[i];
+        b[n] = b[n] || 0;
+        b[n] ++;
+    }
+
+    let index = b.findIndex(n => {
+        return n === 1;
+    });
+
+    return index;
+}
+
+test(a);
+
+
+function test2(a) {
+    let b = 0;
+    for (let i = 0; i < a.length; i++) {
+        b ^= a[i];
+    }
+    return b;
+}
+
+test2(a);

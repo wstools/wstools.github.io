@@ -20,13 +20,34 @@ body {
     white-space: normal;
     display: inline;
     display: inline-block;
+    display: none;
 
     text-align: right;
     display: inline-block;
 
     border-bottom: 1 solid #151515;
     border-style: dotted;
-    border-style: dashed;
+    border-style: calc(1px);
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: 1;
+}
+
+button {
+    color: #BFBFBF;
+    background-color: #404040;
+    border: 1px solid #606060;
+    border-radius: 3px;
+    border-collapse: collapse;
+}
+button:hover {
+    background-color: #202020;
+}
+button:active {
+    background-color: #151515;
+    transform: translateY(0.1em);
 }
 
 /* 颜色标签
@@ -42,7 +63,7 @@ body {
 <him></him> 亮紫色 谣言
 <hik></hik> 灰色
 <opt></opt> 阴影
-
+<mag></mag> 暗紫色 分解装备
 */
 
 /*  橙色药方 玄灵丹   天仙藤,人参,巨骨舌鱼,盘龙参,人参,灵芝,人参,凌霄花,银龙鱼

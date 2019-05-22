@@ -15,31 +15,44 @@
     <div id="output"></div>
     <img src="" alt="" sizes="" srcset="">
 
+    <!-- preload="auto" -->
+
+
+    <button type="button" id="click">play</button>
+
+    <script>
+      $("#click").click(beep);
+      function beep() {
+        let beep = document.getElementById('beep');
+        beep.play();
+      }
+    </script>
+
 
 <script>
 
 // 4255d986ae7145348869e423c18ecd04 EDpPhBL/vNLf+cWzRj15mwyceMPAdqaS	1556086411.7659452
 
-let uri = "ws://120.79.75.160:25632";
-let websocket = new WebSocket(uri);
-websocket.onopen = function(event) {
-    console.log("onopen");
-    console.log(event);
-    websocket.send("4255d986ae7145348869e423c18ecd04 EDpPhBL/vNLf+cWzRj15mwyceMPAdqaS");
-};
-websocket.onclose = function(event) {
-    console.log("onclose");
-    console.log(event);
+// let uri = "ws://120.79.75.160:25632";
+// let websocket = new WebSocket(uri);
+// websocket.onopen = function(event) {
+//     console.log("onopen");
+//     console.log(event);
+//     websocket.send("4255d986ae7145348869e423c18ecd04 EDpPhBL/vNLf+cWzRj15mwyceMPAdqaS");
+// };
+// websocket.onclose = function(event) {
+//     console.log("onclose");
+//     console.log(event);
 
-};
-websocket.onmessage = function(event) {
-    console.log("onmessage");
-    console.log(event);
-};
-websocket.onerror = function(event) {
-    console.log("onerror");
-    console.log(event);
-};
+// };
+// websocket.onmessage = function(event) {
+//     console.log("onmessage");
+//     console.log(event);
+// };
+// websocket.onerror = function(event) {
+//     console.log("onerror");
+//     console.log(event);
+// };
 
 
 
@@ -50,16 +63,16 @@ websocket.onerror = function(event) {
 //     complete(request.responseText);
 // };
 // request.send();
-// console.log(request);
-$.ajax({
-  url: "http://game.wsmud.com/Game/GetServer",
-  dataType: "text",
-//   jsonp: "callback",
-//   context: document.body,
-  success: function(data) {
-    console.log(data);
-  }
-});
+// // console.log(request);
+// $.ajax({
+//   url: "http://game.wsmud.com/Game/GetServer",
+//   dataType: "text",
+// //   jsonp: "callback",
+// //   context: document.body,
+//   success: function(data) {
+//     console.log(data);
+//   }
+// });
 
 // [
 //     {"ID":1,"Name":"一区","Port":25631,"IsTest":false,"IP":"120.79.75.160","IsRcd":false},
